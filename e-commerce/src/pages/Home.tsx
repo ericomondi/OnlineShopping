@@ -233,9 +233,9 @@ const Home: React.FC = () => {
             }`}
           >
             <h1 className="mb-6 text-5xl lg:text-6xl tracking-tight font-extrabold text-gray-900 dark:text-white leading-tight">
-              Discover Your
+              Amaizing Deals
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                {" "}Perfect Product
+                {" "}Perfect 4 You
               </span>
             </h1>
             <p className="mb-6 text-xl leading-relaxed">
