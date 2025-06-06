@@ -25,16 +25,16 @@ const Footer: React.FC = () => {
                 </h2>
                 <ul className="text-gray-600 dark:text-gray-400">
                   <li className="mb-4">
-                    <a href="https://flowbite.com" className="hover:underline">
+                    <a href="https://www.instagram.com/flowtechs_ltd" className="hover:underline">
                       FlowTechs™
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://tailwindcss.com/"
+                      href="https://steveleoprof.netlify.app"
                       className="hover:underline"
                     >
-                      Tailwind CSS
+                      Tailwind
                     </a>
                   </li>
                 </ul>
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               © 2025{" "}
-              <a href="https://flowbite.com" className="hover:underline">
+              <a href="https://github.com/ericomondi" className="hover:underline">
                 FlowTechs™
               </a>
               . All Rights Reserved.

@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
                   alt="FlowBite Logo"
                 />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  Flowbite
+                  FlowTechs
                 </span>
               </a>
               <form action="#" method="GET" className="hidden lg:block lg:pl-2">
