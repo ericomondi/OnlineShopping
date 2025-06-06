@@ -11,7 +11,7 @@ load_dotenv()
 
 
 
-password = ("leo.steve")
+password = ("")
 URL_DATABASE = f"mysql+pymysql://root:{password}@localhost:3306/ecommerce"
 engine = create_engine(URL_DATABASE)
 
