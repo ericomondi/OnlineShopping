@@ -155,6 +155,8 @@ async def create_category(user: user_dependency, db: db_dependency, category: Ca
         logger.error(f"Error creating category: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
+
+
 @app.post("/products", status_code=status.HTTP_201_CREATED)
 async def add_product(user: user_dependency, db: db_dependency, create_product: ProductsBase):
     require_admin(user)

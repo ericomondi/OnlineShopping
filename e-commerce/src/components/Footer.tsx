@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
                   alt="FlowBite Logo"
                 />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  Flowbite
+                  FlowTechs
                 </span>
               </a>
             </div>
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
                 <ul className="text-gray-600 dark:text-gray-400">
                   <li className="mb-4">
                     <a href="https://flowbite.com" className="hover:underline">
-                      Flowbite
+                      FlowTechs™
                     </a>
                   </li>
                   <li>
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                 <ul className="text-gray-600 dark:text-gray-400">
                   <li className="mb-4">
                     <a
-                      href="https://github.com/themesberg/flowbite"
+                      href="https://github.com/ericomondi"
                       className="hover:underline "
                     >
                       Github
@@ -54,10 +54,10 @@ const Footer: React.FC = () => {
                   </li>
                   <li>
                     <a
-                      href="https://discord.gg/4eeurUVvTy"
+                      href="https://github.com/steve-leo254"
                       className="hover:underline"
                     >
-                      Discord
+                      Github
                     </a>
                   </li>
                 </ul>
@@ -84,9 +84,9 @@ const Footer: React.FC = () => {
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-              © 2022{" "}
+              © 2025{" "}
               <a href="https://flowbite.com" className="hover:underline">
-                Flowbite™
+                FlowTechs™
               </a>
               . All Rights Reserved.
             </span>
@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/flowtechs_ltd"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <svg
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="/https://www.tiktok.com/@flowtech_solutions"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <svg

@@ -24,7 +24,6 @@ const AboutPage: React.FC = () => {
     "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
     "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
     "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
-    
   ];
 
   // Auto-advance carousel
@@ -115,19 +114,18 @@ const AboutPage: React.FC = () => {
               }`}
             >
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-                We Build
+                Shop A Product
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   {" "}
-                  Digital Dreams
+                  Perfect For You
                 </span>
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                We're a team of passionate strategists, designers, and
-                developers who transform ideas into exceptional digital
-                experiences. Small enough to be agile, experienced enough to
-                deliver at scale.
+                Explore our extensive selection of high-quality products
+                tailored to meet all your needs. Enjoy seamless shopping, secure
+                payment, and fast delivery right to your doorstep.
               </p>
-               <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4">
                 <Link to="/store">
                   <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                     Our Products
@@ -152,13 +150,13 @@ const AboutPage: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <img
                     className="w-full rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-                    alt="Our creative workspace"
+                    src="https://thumbs.dreamstime.com/b/kyiv-ukraine-february-computer-hardware-store-components-shelf-including-ram-ssd-motherboard-cpu-display-like-cpus-359344790.jpg"
+                    alt="office content 1"
                   />
                   <img
                     className="w-full rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 mt-8"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-                    alt="Team collaboration"
+                    src="https://muscat.gccgamers.com/best-computer-shop/assets/product-1.webp"
+                    alt="office content 2"
                   />
                 </div>
                 <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full opacity-20 animate-pulse"></div>
@@ -339,11 +337,11 @@ const AboutPage: React.FC = () => {
           >
             <Heart className="w-16 h-16 text-white mx-auto mb-6" />
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Build Something Amazing?
+              Share Your Shoping experience
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Let's collaborate and turn your vision into reality. We're excited
-              to hear about your next project.
+              to hear about your shopping experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
