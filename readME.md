@@ -1,4 +1,4 @@
-# E-Commerce API
+# E-Commerce Application
 
 A secure and scalable e-commerce application built with a FastAPI backend and React frontend, providing comprehensive features including product management, user authentication, order processing, and MPESA payment integration.
 
