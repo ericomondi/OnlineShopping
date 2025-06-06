@@ -19,7 +19,7 @@ const Home: React.FC = () => {
     fetchProducts(1, 100, ""); // Fetch many more products for carousel
   }, [fetchProducts]);
 
-  // Effect for continuous scroll loop carousel
+  // Effect for continuous scroll loop carousel (for products)
   useEffect(() => {
     const carousel = carouselRef.current;
     if (!carousel) return;
@@ -71,35 +71,120 @@ const Home: React.FC = () => {
     toast.success(`${product.name} added to cart!`);
   };
 
+  // Images for the first section sliding carousel
+  const images = [
+    {
+      src: "https://thumbs.dreamstime.com/b/kyiv-ukraine-february-computer-hardware-store-components-shelf-including-ram-ssd-motherboard-cpu-display-like-cpus-359344790.jpg",
+      alt: "Computer hardware components shelf",
+    },
+    {
+      src: "https://muscat.gccgamers.com/best-computer-shop/assets/product-1.webp",
+      alt: "Gaming product showcase",
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  // Auto slide effect with interval, resets on manual navigation
+  useEffect(() => {
+    // Clear any existing interval
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    // Set new interval for auto sliding every 4 seconds
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 4000);
+
+    // Cleanup on unmount or index change
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [currentIndex, images.length]);
+
   return (
     <>
-      <section className="bg-white dark:bg-gray-900">
-        <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-          <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-              Discover Your Perfect Product
-            </h2>
-            <p className="mb-4">
-              Explore our extensive selection of high-quality products tailored
-              to meet all your needs. Enjoy seamless shopping, secure payment,
-              and fast delivery right to your doorstep.
-            </p>
-            <p>
-              Our commitment is to provide you with exceptional customer
-              service, great prices, and a shopping experience you can trust.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4 mt-8">
-            <img
-              className="w-full rounded-lg"
-              src="https://thumbs.dreamstime.com/b/kyiv-ukraine-february-computer-hardware-store-components-shelf-including-ram-ssd-motherboard-cpu-display-like-cpus-359344790.jpg"
-              alt="office content 1"
-            />
-            <img
-              className="mt-4 w-full lg:mt-10 rounded-lg"
-              src="https://muscat.gccgamers.com/best-computer-shop/assets/product-1.webp"
-              alt="office content 2"
-            />
+      {/* First Section: Sliding Carousel Showing One Image at a Time with Auto Slide */}
+      <section className="bg-white dark:bg-gray-900 py-16">
+        <div className="max-w-[1200px] mx-auto px-4">
+          <h2 className="text-[48px] font-extrabold mb-12 text-gray-900 dark:text-white text-center">
+            Featured Collections
+          </h2>
+
+          <div className="relative w-full max-w-4xl mx-auto rounded-2xl shadow-md overflow-hidden">
+            {/* Images container: flex side-by-side */}
+            <div
+              className="flex transition-transform duration-700 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              aria-live="polite"
+              aria-roledescription="carousel"
+            >
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 w-full h-96 rounded-2xl overflow-hidden"
+                  aria-hidden={currentIndex !== index}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              aria-label="Previous Slide"
+              onClick={() => {
+                prevSlide();
+              }}
+              className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/90 dark:bg-gray-700/90 dark:text-white rounded-full p-3 shadow-lg hover:bg-white dark:hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                viewBox="0 0 24 24"
+              >
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              aria-label="Next Slide"
+              onClick={() => {
+                nextSlide();
+              }}
+              className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/90 dark:bg-gray-700/90 dark:text-white rounded-full p-3 shadow-lg hover:bg-white dark:hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                viewBox="0 0 24 24"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
           </div>
         </div>
       </section>
