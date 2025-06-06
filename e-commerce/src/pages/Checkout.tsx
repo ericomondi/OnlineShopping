@@ -490,11 +490,7 @@ const Checkout: React.FC = () => {
                   <div className="text-center text-gray-900 dark:text-white">
                     Loading products...
                   </div>
-                ) : error ? (
-                  <div className="text-center text-red-600 dark:text-red-400">
-                    Error loading products: {error}
-                  </div>
-                ) : (
+                )  : (
                   <div
                     ref={carouselRef}
                     className="relative overflow-hidden whitespace-nowrap scrollbar-hide"

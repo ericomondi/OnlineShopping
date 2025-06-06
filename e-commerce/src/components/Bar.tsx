@@ -22,7 +22,7 @@ const Bar: React.FC = () => {
   };
   return (
     <>
-      <nav className="bg-white dark:bg-gray-800 antialiased sticky top-0 z-10">
+      <nav className="bg-white dark:bg-gray-800 antialiased sticky top-0 z-20">
         <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
@@ -208,6 +208,7 @@ const Bar: React.FC = () => {
                       My Orders{" "}
                     </a>
                   </li>
+
                   <li>
                     <a
                       href="#"
@@ -215,37 +216,7 @@ const Bar: React.FC = () => {
                       className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
                     >
                       {" "}
-                      Settings{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                    >
-                      {" "}
-                      Favourites{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                    >
-                      {" "}
-                      Delivery Addresses{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                    >
-                      {" "}
-                      Billing Data{" "}
+                      Address-book{" "}
                     </a>
                   </li>
                   <li>
