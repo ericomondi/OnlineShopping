@@ -80,7 +80,7 @@ const Bar: React.FC = () => {
                 </li>
                 <li className="shrink-0">
                   <a
-                    href="#"
+                    href="/aboutus"
                     title=""
                     className="text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
                   >

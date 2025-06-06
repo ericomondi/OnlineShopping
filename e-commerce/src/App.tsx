@@ -62,6 +62,7 @@ function App() {
               <Route path="/test-products" element={<AdminOrderTable />} />
               <Route path="/orders-management" element={<OrdersManagement />} />
               <Route path="/payment" element={<Payment />} />
+              <Route path="/aboutUs" element={<AboutPage />} />
               <Route path="/category" element={<CategoryForm />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="*" element={<NotFound />} />
